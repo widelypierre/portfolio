@@ -852,6 +852,11 @@ footer {
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .fg-row { grid-template-columns: 1fr; }
+  #impact .metrics-top { grid-template-columns: 1fr !important; }
+  #impact .metrics-bottom { grid-template-columns: 1fr 1fr !important; }
+  #impact .metrics-narrative { grid-template-columns: 1fr !important; }
+  #techops > div:first-of-type { grid-template-columns: 1fr !important; }
+  #techops > div:last-of-type { grid-template-columns: 1fr 1fr !important; }
 }
 </style>
 </head>
@@ -862,10 +867,13 @@ footer {
   <a href="#" class="nav-name">WIDELY <span>PIERRE</span></a>
   <ul class="nav-links">
     <li><a href="#identity">About</a></li>
+    <li><a href="#impact">Impact</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#techops">TechOps</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#contact" class="nav-hire">Hire Me</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu">
@@ -874,10 +882,13 @@ footer {
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#identity" onclick="closeMenu()">About</a>
+  <a href="#impact" onclick="closeMenu()">Impact</a>
   <a href="#experience" onclick="closeMenu()">Experience</a>
   <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#techops" onclick="closeMenu()">TechOps</a>
   <a href="#education" onclick="closeMenu()">Education</a>
   <a href="#reviews" onclick="closeMenu()">Reviews</a>
+  <a href="#blog" onclick="closeMenu()">Blog</a>
   <a href="#contact" class="mob-hire" onclick="closeMenu()">Hire Me</a>
 </div>
 
@@ -961,6 +972,80 @@ footer {
   </div>
 </section>
 
+<!-- CAREER IMPACT METRICS -->
+<section id="impact" style="background: var(--ink); padding: 96px 6%; position: relative; overflow: hidden;">
+
+  <!-- Background design elements -->
+  <div style="position:absolute; inset:0; background: radial-gradient(ellipse at 15% 50%, rgba(42,157,143,0.07) 0%, transparent 50%), radial-gradient(ellipse at 85% 20%, rgba(233,196,106,0.05) 0%, transparent 45%); pointer-events:none;"></div>
+  <div style="position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 72px 72px; pointer-events:none;"></div>
+
+  <div style="position: relative; z-index: 2;">
+
+    <!-- Header -->
+    <div style="max-width: 720px; margin: 0 auto 72px; text-align: center;">
+      <div class="s-eyebrow" style="justify-content:center; color:var(--teal-light);">Career Impact at Scale</div>
+      <h2 class="s-title white" style="text-align:center; max-width:100%; font-size: clamp(32px, 4vw, 52px); margin-bottom: 20px;">16 Years. Measured.<br><em style="font-style:normal; color:var(--teal-light);">Not Estimated.</em></h2>
+      <p style="font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.8; font-weight: 300; max-width: 600px; margin: 0 auto;">These are not projections or approximations — they are the verified output of a career built in high-stakes, real-time language environments. Every number below represents a human interaction, a document delivered, or a professional shaped.</p>
+    </div>
+
+    <!-- Top 3 Flagship Metrics -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,0.04); border-radius: 12px; overflow: hidden; margin-bottom: 2px;">
+
+      <div style="background: rgba(14,14,18,0.95); padding: 48px 36px; text-align:center; border-bottom: 3px solid var(--teal); position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-20px; right:-20px; width:120px; height:120px; border-radius:50%; background: radial-gradient(circle, rgba(42,157,143,0.12), transparent); pointer-events:none;"></div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 5vw, 72px); font-weight: 500; color: var(--teal-light); line-height: 1; margin-bottom: 8px;" data-target="110000000" data-suffix="+" data-prefix="">110M+</div>
+        <div style="font-size: 13px; font-weight: 500; color: white; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px;">Live Spoken Words Interpreted</div>
+        <div style="font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.6; font-weight: 300;">Across simultaneous &amp; consecutive modes — medical, legal, court, and humanitarian settings</div>
+      </div>
+
+      <div style="background: rgba(14,14,18,0.95); padding: 48px 36px; text-align:center; border-bottom: 3px solid var(--amber); position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-20px; right:-20px; width:120px; height:120px; border-radius:50%; background: radial-gradient(circle, rgba(233,196,106,0.1), transparent); pointer-events:none;"></div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 5vw, 72px); font-weight: 500; color: var(--amber); line-height: 1; margin-bottom: 8px;">52K+</div>
+        <div style="font-size: 13px; font-weight: 500; color: white; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px;">Individuals Served</div>
+        <div style="font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.6; font-weight: 300;">Patients, clients, attorneys, asylum seekers, and stakeholders — served with precision and cultural competency</div>
+      </div>
+
+      <div style="background: rgba(14,14,18,0.95); padding: 48px 36px; text-align:center; border-bottom: 3px solid #7B68EE; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-20px; right:-20px; width:120px; height:120px; border-radius:50%; background: radial-gradient(circle, rgba(123,104,238,0.1), transparent); pointer-events:none;"></div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 5vw, 72px); font-weight: 500; color: #A599F5; line-height: 1; margin-bottom: 8px;">1,500+</div>
+        <div style="font-size: 13px; font-weight: 500; color: white; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px;">Interpreters Trained &amp; Mentored</div>
+        <div style="font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.6; font-weight: 300;">Recruited, onboarded, and developed into professional-grade multilingual practitioners</div>
+      </div>
+
+    </div>
+
+    <!-- Secondary Metrics Row -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: rgba(255,255,255,0.04); border-radius: 0 0 12px 12px; overflow: hidden; margin-bottom: 56px;">
+
+      <div style="background: rgba(20,20,28,0.97); padding: 32px 24px; text-align:center;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 500; color: var(--teal-light); line-height: 1; margin-bottom: 6px;">844K+</div>
+        <div style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px;">Active In-Session Minutes</div>
+        <div style="font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.5;">14,080+ hours of strict microphone time — not meetings, not prep. Live. On.</div>
+      </div>
+
+      <div style="background: rgba(20,20,28,0.97); padding: 32px 24px; text-align:center;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 500; color: var(--amber); line-height: 1; margin-bottom: 6px;">8.8M+</div>
+        <div style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px;">Written Words Translated</div>
+        <div style="font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.5;">Complex legal, medical &amp; immigration documents requiring expert linguistic precision</div>
+      </div>
+
+      <div style="background: rgba(20,20,28,0.97); padding: 32px 24px; text-align:center;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 500; color: #A599F5; line-height: 1; margin-bottom: 6px;">52,800+</div>
+        <div style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px;">Sessions Completed</div>
+        <div style="font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.5;">OPI, VRI, medical, court &amp; legal hearings — zero tolerance for inaccuracy</div>
+      </div>
+
+      <div style="background: rgba(20,20,28,0.97); padding: 32px 24px; text-align:center;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 500; color: white; line-height: 1; margin-bottom: 6px;">3,520</div>
+        <div style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px;">Working Days</div>
+        <div style="font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.5;">16 years of consistent, cross-sector field presence across 4 continents of impact</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="exp-layout">
@@ -986,6 +1071,7 @@ footer {
           <li>Founded and manages a multilingual language services company across healthcare, legal, nonprofit, and business sectors</li>
           <li>Implements AI-assisted language workflows and CAT tools including SDL Trados Studio for scalable multilingual delivery</li>
           <li>Builds and maintains master Excel databases tracking client pipelines, project assignments, and operational metrics</li>
+          <li>Designs and delivers interpreter training programs — onboarding, quality standards, ethics, and professional development for multilingual practitioners</li>
           <li>Manages multilingual client acquisition via Google Ads, Meta Ads, and social media campaigns</li>
         </ul>
         <span class="exp-type both">Language + Data</span>
@@ -1033,7 +1119,7 @@ footer {
           <div class="exp-date">2022 – 2023</div>
         </div>
         <ul class="exp-bullets">
-          <li>Provided onsite multilingual interpretation across Dari, Pashto, Farsi, Haitian Creole, French, Spanish, Ukrainian, and English</li>
+          <li>Assisted with onsite multilingual interpretation across Dari, Pashto, Farsi, Haitian Creole, French, Spanish, Ukrainian, and English</li>
           <li>Processed, verified, and logged critical communication records and identity data under tight federal timelines</li>
           <li>Collaborated with multi-agency teams to extract, validate, and input precise logistical data</li>
           <li>Received formal commendation for accuracy, professionalism, and operational support</li>
@@ -1041,15 +1127,18 @@ footer {
         <span class="exp-type both">Language + Data</span>
       </div>
 
-
+      <div class="exp-entry visible" data-type="lang">
+        <div class="exp-meta">
+          <div>
+            <div class="exp-org">Tarjimly NGO</div>
             <div class="exp-role">Freelance Translator &amp; Interpreter</div>
           </div>
           <div class="exp-date">2018 – 2025</div>
         </div>
         <ul class="exp-bullets">
           <li>Remote multilingual interpretation for refugees, immigrants, and humanitarian organizations</li>
-          <li>Supports healthcare, legal, education, and employment communication with cultural sensitivity</li>
-          <li>Maintains absolute confidentiality for sensitive legal and personal records</li>
+          <li>Supported healthcare, legal, education, and employment communication with cultural sensitivity</li>
+          <li>Maintained absolute confidentiality for sensitive legal and personal records</li>
         </ul>
         <span class="exp-type lang">Language Services</span>
       </div>
@@ -1209,6 +1298,152 @@ footer {
   </div>
 </section>
 
+
+<!-- DIGITAL TECHOPS -->
+<section id="techops" style="background: #111117; padding: 96px 6%; position: relative; overflow: hidden;">
+
+  <div style="position:absolute; inset:0; background: radial-gradient(ellipse at 100% 0%, rgba(42,157,143,0.06) 0%, transparent 50%); pointer-events:none;"></div>
+  <div style="position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 48px 48px; pointer-events:none;"></div>
+
+  <div style="position:relative; z-index:2; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;">
+
+    <!-- LEFT: Text -->
+    <div>
+      <div class="s-eyebrow" style="color: var(--teal-light);">Digital TechOps</div>
+      <h2 class="s-title white" style="margin-bottom: 24px;">Systems Infrastructure &amp;<br>Digital Operations</h2>
+      <p style="font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.9; font-weight: 300; margin-bottom: 32px;">Bridging the gap between technical infrastructure and digital asset management. I architect backend enterprise environments — managing version control via GitHub, domain architecture via GoDaddy, and cloud ecosystems via Google Workspace and Zoho — while simultaneously deploying and scaling front-facing web platforms utilizing WordPress, Wix, and Squarespace to streamline corporate communications.</p>
+
+      <!-- Capability Tags -->
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <span style="font-size: 11px; padding: 5px 13px; border-radius: 3px; background: rgba(42,157,143,0.1); border: 1px solid rgba(42,157,143,0.25); color: var(--teal-light); letter-spacing: 0.06em; text-transform: uppercase;">Version Control</span>
+        <span style="font-size: 11px; padding: 5px 13px; border-radius: 3px; background: rgba(42,157,143,0.1); border: 1px solid rgba(42,157,143,0.25); color: var(--teal-light); letter-spacing: 0.06em; text-transform: uppercase;">Domain Architecture</span>
+        <span style="font-size: 11px; padding: 5px 13px; border-radius: 3px; background: rgba(42,157,143,0.1); border: 1px solid rgba(42,157,143,0.25); color: var(--teal-light); letter-spacing: 0.06em; text-transform: uppercase;">Cloud Ecosystems</span>
+        <span style="font-size: 11px; padding: 5px 13px; border-radius: 3px; background: rgba(42,157,143,0.1); border: 1px solid rgba(42,157,143,0.25); color: var(--teal-light); letter-spacing: 0.06em; text-transform: uppercase;">CMS Deployment</span>
+        <span style="font-size: 11px; padding: 5px 13px; border-radius: 3px; background: rgba(42,157,143,0.1); border: 1px solid rgba(42,157,143,0.25); color: var(--teal-light); letter-spacing: 0.06em; text-transform: uppercase;">Enterprise Admin</span>
+        <span style="font-size: 11px; padding: 5px 13px; border-radius: 3px; background: rgba(42,157,143,0.1); border: 1px solid rgba(42,157,143,0.25); color: var(--teal-light); letter-spacing: 0.06em; text-transform: uppercase;">Web Scaling</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Two Columns -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+
+      <!-- Column 1: Infrastructure & Admin -->
+      <div style="background: #18181f; border: 1px solid rgba(255,255,255,0.07); border-top: 2px solid var(--teal); border-radius: 8px; padding: 24px 20px;">
+        <div style="font-size: 11px; font-weight: 500; color: var(--teal-light); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px;">Infrastructure &amp; Admin</div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px;">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: #161b22; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 500; color: white;">GitHub</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 1px;">Version Control &amp; Repos</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px;">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: #1a1a2e; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#00B373"/><text x="12" y="16" font-size="8" text-anchor="middle" fill="white" font-weight="bold">Go</text></svg>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 500; color: white;">GoDaddy</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 1px;">Domain &amp; DNS Architecture</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px;">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: #1a1a2e; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" fill="#4285F4"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 500; color: white;">Google Workspace</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 1px;">Cloud &amp; Collaboration Suite</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px;">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: #1a1a2e; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#E44C41"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.26 13.84l-2.97-.924c-.646-.204-.657-.646.136-.953l11.57-4.461c.537-.194 1.006.131.898.719z"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 500; color: white;">Zoho</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 1px;">CRM &amp; Business Suite</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Column 2: Web Ecosystems & CMS -->
+      <div style="background: #18181f; border: 1px solid rgba(255,255,255,0.07); border-top: 2px solid var(--amber); border-radius: 8px; padding: 24px 20px;">
+        <div style="font-size: 11px; font-weight: 500; color: var(--amber); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px;">Web Ecosystems &amp; CMS</div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px;">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: #21759b; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.109m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.075 1.125.105l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.105 1.234-.105.585-.075.516-.93-.065-.9 0 0-1.746.137-2.874.137-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.37 1.072 7.286 2.833-.046-.003-.091-.009-.137-.009-1.068 0-1.824.93-1.824 1.93 0 .893.517 1.643 1.066 2.531.411.72.893 1.648.893 2.977 0 .915-.354 1.994-.826 3.479l-1.098 3.659-3.913-11.62zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.021.055.046.107.073.157A10.83 10.83 0 0 1 12 22.784zM1.215 12c0-1.662.329-3.248.926-4.695L7.28 21.352C3.666 19.454 1.215 15.536 1.215 12zM12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0z"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 500; color: white;">WordPress</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 1px;">Deploy &amp; Scale Platforms</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px;">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: #116DFF; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M11.258.004C5.033.131-.068 5.376.001 11.601c.071 6.22 5.195 11.263 11.42 11.26 6.225-.003 11.312-5.066 11.312-11.29C22.733 5.186 17.59-.122 11.258.004zm5.815 7.43c-.18.657-.734.894-1.196 1.154-.38.214-.753.418-1.042.688-.344.32-.48.745-.53 1.248l-.08.812H11.52l.07-.919c.098-1.295.651-2.143 1.818-2.8.37-.207.756-.403.97-.705.272-.385.217-.887-.077-1.207a1.358 1.358 0 0 0-1.066-.433c-.823.01-1.423.704-1.423 1.614v.186H9.15v-.188c0-1.87 1.301-3.204 3.175-3.204.883 0 1.698.315 2.294.887.59.565.896 1.356.814 2.167h-.16zm-4.45 6.613a1.143 1.143 0 0 1-1.148-1.142 1.147 1.147 0 0 1 2.292.006 1.145 1.145 0 0 1-1.144 1.136z"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 500; color: white;">Wix</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 1px;">Web Design &amp; Publishing</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px;">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: #000; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.082 7.637l-3.54 9.944c-.324.9-1.508.9-1.832 0L8.169 11.25l-1.41 4.33c-.323.9-1.507.9-1.83 0L2.917 9.37H4.96l1.265 3.868 1.41-4.33c.322-.9 1.507-.9 1.83 0l3.542 6.33 2.066-5.8h2.009z"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 500; color: white;">Squarespace</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 1px;">Corporate Web Platforms</div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px;">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: rgba(42,157,143,0.2); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:14px;">⚙️</div>
+            <div>
+              <div style="font-size: 13px; font-weight: 500; color: white;">Systems Integration</div>
+              <div style="font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 1px;">End-to-End Digital Ops</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom metric strip -->
+  <div style="position:relative; z-index:2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,0.04); border-radius: 8px; overflow: hidden; margin-top: 48px;">
+    <div style="background: #18181f; padding: 20px 28px; display:flex; align-items:center; gap:16px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--teal-light); font-weight:500;">7+</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing:0.04em; text-transform:uppercase; line-height:1.4;">Platforms &amp; tools<br>actively managed</span>
+    </div>
+    <div style="background: #18181f; padding: 20px 28px; display:flex; align-items:center; gap:16px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--amber); font-weight:500;">3</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing:0.04em; text-transform:uppercase; line-height:1.4;">Cloud ecosystems<br>deployed &amp; scaled</span>
+    </div>
+    <div style="background: #18181f; padding: 20px 28px; display:flex; align-items:center; gap:16px;">
+      <span style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: white; font-weight:500;">Full</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing:0.04em; text-transform:uppercase; line-height:1.4;">Stack digital ops<br>frontend to backend</span>
+    </div>
+  </div>
+
+</section>
+
 <!-- EDUCATION -->
 <section id="education">
   <div class="s-eyebrow">Education &amp; Certifications</div>
@@ -1288,6 +1523,13 @@ footer {
           </div>
         </div>
         <div class="contact-detail">
+          <div class="c-icon">✉️</div>
+          <div>
+            <div class="c-label">Email</div>
+            <div class="c-val"><a href="mailto:contact@witislanguage.com" style="color:var(--teal-light); text-decoration:none;">contact@witislanguage.com</a></div>
+          </div>
+        </div>
+        <div class="contact-detail">
           <div class="c-icon">📞</div>
           <div>
             <div class="c-label">Phone</div>
@@ -1309,51 +1551,72 @@ footer {
           </div>
         </div>
       </div>
+
+      <!-- Calendly Book Button -->
+      <div style="margin-top: 36px;">
+        <div style="font-size: 11px; color: var(--teal-light); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;">📅 Book a Free Consultation</div>
+        <a href="https://calendly.com/contact-widelypierre" target="_blank"
+          style="display:inline-flex; align-items:center; gap:10px; background: var(--teal); color: white; padding: 14px 28px; border-radius: 6px; font-size: 14px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: background 0.2s;"
+          onmouseover="this.style.background='var(--teal-light)'; this.style.color='var(--ink)'"
+          onmouseout="this.style.background='var(--teal)'; this.style.color='white'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+          Schedule 30-Min Call
+        </a>
+        <p style="font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 10px; font-weight: 300;">Free · 30 minutes · Video or phone</p>
+      </div>
     </div>
 
     <div class="contact-form">
       <div class="form-heading">Send a message</div>
       <div class="form-hint">I'll respond within one business day.</div>
 
-      <div class="fg-row">
-        <div class="fg">
-          <label>First Name</label>
-          <input type="text" placeholder="Jane">
+      <form action="https://formspree.io/f/xykvarlp" method="POST" id="contactForm">
+        <div class="fg-row">
+          <div class="fg">
+            <label>First Name</label>
+            <input type="text" name="first_name" placeholder="Jane" required>
+          </div>
+          <div class="fg">
+            <label>Last Name</label>
+            <input type="text" name="last_name" placeholder="Doe" required>
+          </div>
         </div>
+
         <div class="fg">
-          <label>Last Name</label>
-          <input type="text" placeholder="Doe">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="jane@company.com" required>
         </div>
-      </div>
 
-      <div class="fg">
-        <label>Email</label>
-        <input type="email" placeholder="jane@company.com">
-      </div>
+        <div class="fg">
+          <label>Regarding</label>
+          <select name="subject">
+            <option value="">Select a topic...</option>
+            <option>Multilingual Program Management</option>
+            <option>Language Access Coordination</option>
+            <option>Medical / Legal Interpretation</option>
+            <option>Data Coordination / Analytics</option>
+            <option>Translation / Localization</option>
+            <option>Full-time Employment</option>
+            <option>Contract / Freelance Work</option>
+            <option>Other</option>
+          </select>
+        </div>
 
-      <div class="fg">
-        <label>Regarding</label>
-        <select>
-          <option value="">Select a topic...</option>
-          <option>Multilingual Program Management</option>
-          <option>Language Access Coordination</option>
-          <option>Medical / Legal Interpretation</option>
-          <option>Data Coordination / Analytics</option>
-          <option>Translation / Localization</option>
-          <option>Full-time Employment</option>
-          <option>Contract / Freelance Work</option>
-          <option>Other</option>
-        </select>
-      </div>
+        <div class="fg">
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell me about your opportunity or project..." required></textarea>
+        </div>
 
-      <div class="fg">
-        <label>Message</label>
-        <textarea placeholder="Tell me about your opportunity or project..."></textarea>
-      </div>
+        <button type="submit" class="form-send" id="submitBtn">
+          Send Message
+        </button>
+      </form>
 
-      <button class="form-send" onclick="this.textContent='✓ Sent! I\'ll be in touch soon.'; this.style.background='#1A6B61'; this.disabled=true;">
-        Send Message
-      </button>
+      <div id="formSuccess" style="display:none; margin-top:16px; padding:16px; background:rgba(42,157,143,0.12); border:1px solid rgba(42,157,143,0.3); border-radius:6px; text-align:center;">
+        <div style="font-size:22px; margin-bottom:6px;">✓</div>
+        <div style="font-size:14px; color:var(--teal-light); font-weight:500;">Message sent successfully!</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.45); margin-top:4px; font-weight:300;">I'll get back to you within one business day.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1405,13 +1668,110 @@ footer {
   </div>
 </section>
 
+<!-- BLOG -->
+<section id="blog" style="background: var(--white); padding: 96px 6%;">
+  <div class="s-eyebrow">Blog</div>
+  <h2 class="s-title">Thoughts, Insights &amp; Resources</h2>
+  <p class="s-sub" style="margin-bottom: 48px;">Articles on language access, multilingual operations, data coordination, immigrant community support, and professional development.</p>
+
+  <div style="text-align: center; padding: 72px 24px; background: var(--white); border: 1px solid var(--paper-warm); border-radius: 12px; max-width: 640px; margin: 0 auto;">
+    <div style="font-size: 52px; margin-bottom: 20px;">✍️</div>
+    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500; color: var(--ink); margin-bottom: 12px;">Articles, insights &amp; resources</h3>
+    <p style="font-size: 15px; color: var(--slate); line-height: 1.75; font-weight: 300; max-width: 420px; margin: 0 auto 36px;">Language access, multilingual operations, data coordination, immigrant community support, and professional development — all on the WiTIS blog.</p>
+    <a href="https://www.witislanguage.com/blog" target="_blank"
+      style="display: inline-flex; align-items: center; gap: 10px; background: var(--ink); color: white; padding: 15px 36px; border-radius: 6px; font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.15s;"
+      onmouseover="this.style.background='var(--teal)'; this.style.transform='translateY(-2px)'"
+      onmouseout="this.style.background='var(--ink)'; this.style.transform='translateY(0)'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+      Read My Blogs
+    </a>
+  </div>
+
+</section>
+
+<!-- FOLLOW ME -->
+<section id="follow" style="background: var(--ink); padding: 80px 6%;">
+  <div style="text-align: center; max-width: 560px; margin: 0 auto;">
+    <div class="s-eyebrow" style="justify-content: center; color: var(--teal-light);">Stay Connected</div>
+    <h2 class="s-title white" style="text-align: center; max-width: 100%; margin-bottom: 12px;">Follow WIDELY PIERRE</h2>
+    <p style="font-size: 15px; color: rgba(255,255,255,0.45); font-weight: 300; line-height: 1.7; margin-bottom: 48px;">Connect for language access insights, professional tips, multilingual resources, and community stories.</p>
+
+    <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+
+      <a href="https://www.linkedin.com/in/widely-pierre-912b3317a" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 24px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; text-decoration: none; min-width: 100px; transition: all 0.2s;" onmouseover="this.style.background='rgba(10,102,194,0.2)'; this.style.borderColor='rgba(10,102,194,0.5)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'; this.style.borderColor='rgba(255,255,255,0.08)'">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <span style="font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; text-transform: uppercase;">LinkedIn</span>
+      </a>
+
+      <a href="https://www.tiktok.com/@witislanguagellc?_r=1&_t=ZP-96mc8dyIQ9u" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 24px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; text-decoration: none; min-width: 100px; transition: all 0.2s;" onmouseover="this.style.background='rgba(255,0,80,0.15)'; this.style.borderColor='rgba(255,0,80,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'; this.style.borderColor='rgba(255,255,255,0.08)'">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.26 8.26 0 0 0 4.83 1.55V6.79a4.85 4.85 0 0 1-1.06-.1z"/></svg>
+        <span style="font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; text-transform: uppercase;">TikTok</span>
+      </a>
+
+      <a href="https://www.facebook.com/share/1FuGqxh4C3/?mibextid=wwXIfr" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 24px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; text-decoration: none; min-width: 100px; transition: all 0.2s;" onmouseover="this.style.background='rgba(24,119,242,0.2)'; this.style.borderColor='rgba(24,119,242,0.5)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'; this.style.borderColor='rgba(255,255,255,0.08)'">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        <span style="font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; text-transform: uppercase;">Facebook</span>
+      </a>
+
+      <a href="https://www.instagram.com/pwidely?igsh=dXZpbzh1cm91Yjk4&utm_source=qr" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 24px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; text-decoration: none; min-width: 100px; transition: all 0.2s;" onmouseover="this.style.background='rgba(225,48,108,0.2)'; this.style.borderColor='rgba(225,48,108,0.5)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'; this.style.borderColor='rgba(255,255,255,0.08)'">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="url(#ig)"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="25%" style="stop-color:#e6683c"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="75%" style="stop-color:#cc2366"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        <span style="font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; text-transform: uppercase;">Instagram</span>
+      </a>
+
+      <a href="https://youtube.com/@widelypierre2444?si=bPsHq4wS4rIqChKP" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 24px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; text-decoration: none; min-width: 100px; transition: all 0.2s;" onmouseover="this.style.background='rgba(255,0,0,0.15)'; this.style.borderColor='rgba(255,0,0,0.4)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'; this.style.borderColor='rgba(255,255,255,0.08)'">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        <span style="font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; text-transform: uppercase;">YouTube</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-name">WIDELY <span>PIERRE</span></div>
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <a href="https://www.linkedin.com/in/widely-pierre-912b3317a" target="_blank" title="LinkedIn" style="color: rgba(255,255,255,0.4); transition: color 0.2s;" onmouseover="this.style.color='#0A66C2'" onmouseout="this.style.color='rgba(255,255,255,0.4)'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    <a href="https://www.tiktok.com/@witislanguagellc?_r=1&_t=ZP-96mc8dyIQ9u" target="_blank" title="TikTok" style="color: rgba(255,255,255,0.4); transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.4)'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.26 8.26 0 0 0 4.83 1.55V6.79a4.85 4.85 0 0 1-1.06-.1z"/></svg></a>
+    <a href="https://www.facebook.com/share/1FuGqxh4C3/?mibextid=wwXIfr" target="_blank" title="Facebook" style="color: rgba(255,255,255,0.4); transition: color 0.2s;" onmouseover="this.style.color='#1877F2'" onmouseout="this.style.color='rgba(255,255,255,0.4)'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="https://www.instagram.com/pwidely?igsh=dXZpbzh1cm91Yjk4&utm_source=qr" target="_blank" title="Instagram" style="color: rgba(255,255,255,0.4); transition: color 0.2s;" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='rgba(255,255,255,0.4)'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+    <a href="https://youtube.com/@widelypierre2444?si=bPsHq4wS4rIqChKP" target="_blank" title="YouTube" style="color: rgba(255,255,255,0.4); transition: color 0.2s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='rgba(255,255,255,0.4)'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+  </div>
   <div class="footer-copy">© 2026 · Dallas–Fort Worth, TX · WiTIS Language LLC</div>
 </footer>
 
 <script>
+// Formspree async handler
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    btn.style.background = 'rgba(42,157,143,0.5)';
+    try {
+      const res = await fetch('https://formspree.io/f/xykvarlp', {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        contactForm.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        btn.textContent = 'Try Again';
+        btn.disabled = false;
+        btn.style.background = '#c0392b';
+      }
+    } catch {
+      btn.textContent = 'Try Again';
+      btn.disabled = false;
+      btn.style.background = '#c0392b';
+    }
+  });
+}
+
 function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
   const btn = document.getElementById('hamburger');
